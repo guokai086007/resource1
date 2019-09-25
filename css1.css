@@ -1,0 +1,225 @@
+/*网站导航栏的样式*/
+.navbar{
+	margin-top: 0%;
+}
+.navbar-default{
+	background-color: greenyellow;
+}
+#nav-brand-itheima:hover{
+	color: #5CB85C;
+}
+.nav .active{
+	background: green;
+}
+#nav1 ul li{
+	margin-left: 5px;
+}
+#nav1 ul li a:hover {/*这里是将导航栏中的链接按区域显示，并且鼠标悬浮时有颜色变化*/
+	 display:block; 
+	 background:deepskyblue;
+}
+@media (max-width:970px){
+	.navbar-default .nav-nav>li a{
+		font-size: 1.1em;
+	}
+}
+.dropdown-menu li{
+	background: #00BFFF;
+}
+#nav1 #ul1{
+	width: 100px;
+	margin-left: 10px;
+}
+#nav1 #ul1 a:hover{/*第一个按钮的链接鼠标悬浮变化颜色*/
+	background: mediumvioletred;
+}
+#nav1 #ul1 li{
+	margin-left: -1px;
+	margin-top: -1px;
+}
+#nav1 #ul2{
+	width: 100px;
+	margin-left: 10px;
+}
+#nav1 #ul2 a:hover{/*第二个按钮的链接鼠标悬浮变化颜色*/
+	background: red;
+}
+#nav1 #ul2 li{
+	margin-left: -1px;
+	margin-top: -1px;
+}
+#li_header1{
+	background:white;
+	font-size:18px;
+}
+.btn-success{
+	background: greenyellow;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+#btn1{
+	color: red;
+	width: 160px;
+}
+#btn2{
+	margin-left: 10px;/*单独调整一下按钮2（就是下栏菜单2）的左边间隔*/
+	color: plum;
+	width:160px;
+}
+#ul_header{
+	margin-left: 15%;
+}
+.navbar-toggle{
+	background-color: #00BFFF;
+}
+
+/*网站头的样式*/
+@font-face {
+    font-family: myFont;
+    src:url('../书法.ttf');
+}
+#div1{
+	background-color: green;
+	font-family: MyFont;
+	font-size: 3em;
+}
+#football1{
+	height: 80px;
+	width: 80px;
+	margin-right: 60px;
+	padding: 5px 5px 5px 5px;/*设置图片对于区域的上右下左的内边距*/
+}
+#div2{
+	float: left;
+	display: table;
+	margin-left: 28%;
+	margin-right: 10%;
+}
+#football2{
+	height: 80px;
+	width: 80px;
+	margin-left:-10px;
+	/*因为大力神杯的图片宽度是300px所以与文字有较大的间隔，所以将他与左边的文字间隔值调整为负数*/
+	padding: 5px 5px 5px 5px;
+}
+#title_Header{
+	display: table-cell;
+	vertical-align: middle;
+	font-size:4vw;/*该属性让文字大小自适应屏幕*/
+	color: orangered;
+	text-shadow: 10px 10px 10px palevioletred;/*给文字加上阴影效果*/
+}
+.time{
+	font-size: 2vw;
+	margin-top: 2%;
+	margin-left: 2%;
+	color: peru;
+}
+
+/*轮播图片样式*/
+#slidershow{
+	margin-top: -2.5%;
+}
+#h2_picture1{
+	color: black;
+}
+#id1_picture{
+	color: deeppink;
+}
+#h3_picture3{
+	margin-bottom: 100px;
+	color: white;
+}
+#p1_picture{
+	font-size: 2vw;
+	color: #000000;
+}
+#p3_picture3{
+	margin-bottom: 5%;
+}
+#h3_picture4{
+	margin-bottom: 18px;
+	color: black;
+}
+.carousel-control.left{
+	background-image:         linear-gradient(to right, rgba(173, 255, 47, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+}
+.carousel-control.right{
+	background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(173, 255, 47, .5) 100%);
+}
+
+
+/*宣传模块样式*/
+#ad0{/*设置宣传层与上一个层次的距离*/
+	margin-top: -1px;
+}
+.row{
+	margin-top: 10px;
+}
+#ad_img1,#ad_img2,#ad_img3{
+	height: 300px;
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+.ad1{/*此css层叠样式表可以让文字居于图片下方并字适应宽度*/
+	width: auto;
+	word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+/*更多资讯模块样式*/
+#ad_img4{
+	height: 300px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+#ad_img5{
+	height: 150px;
+	width: 100%;
+	margin-top:-10px;
+}
+#ad_img6{
+	height: 150px;
+	width: 100%;
+}
+#ad_img7{
+	height: 150px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+/*footer样式*/
+.footer p{
+	color: #fff;
+	font-size: lem;
+	line-height: 1.8em;
+	vertical-align: middle;
+	margin: 0.4em 0;
+}
+.footer p a{
+	color: #fff;
+	text-decoration: none;
+}
+.footer{
+	padding: 1em 0;
+	background-color: #D96B66;
+}
+.footer-right ul{
+	padding: 0;
+}
+.footer-right li{
+	display: inline-block;
+	margin: 0 1em;
+}
+.footer-left{
+	float: left;
+}
+.footer-right{
+	float: right;
+}
+.glyphicon{
+	font-size: 1.2em;
+	color: #f2f0f1;
+}

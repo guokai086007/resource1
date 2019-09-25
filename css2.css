@@ -1,0 +1,106 @@
+
+#div_table{
+	margin-top:20px;
+}
+/*table.table-striped tr:nth-child(1){
+	background-color: white;
+}*/
+table.table-striped tr:nth-child(2){
+	background-color: skyblue;
+}
+table.table-striped tr:nth-child(3){
+	background-color: skyblue;
+}
+table.table-striped tr:nth-child(4){
+	background-color: skyblue;
+}
+table.table-striped tr:nth-child(16){
+	background-color: palevioletred;
+}
+table.table-striped tr:nth-child(17){
+	background-color: palevioletred;
+}
+
+table.table-striped tr:hover{
+	background-color: greenyellow;
+}
+
+/*下面是用来表示菜单栏的表格样式*/
+#table_header{
+	text-align: center;
+	margin-top: 10px;
+	width: 100%;
+}
+#table_header td{
+	height: 60px;
+	vertical-align: middle;
+	font-size: 20px;
+}
+#table_header td:hover{
+	display:block; 
+	background:hotpink;
+	/*将表格的每一列设置数据悬浮事件，以区域形式显示，背景为粉色！*/
+}
+
+/*以下是积分表的表格样式*/
+#table1{
+	text-align: center;
+	margin-left: -1px;
+	margin-top: -18px;
+	/*
+	 * 两个表格之间默认有距离，所以将margin-top: -18px;是为了把距离去掉！
+	 */
+}
+#table1 td{
+	height: 80px;
+	vertical-align: middle;
+	/*
+	 * 设置单元格中的内容垂直居中，必须在td中设置vertical-align: middle;
+	 */
+}
+
+/*网页标题样式*/
+@font-face {
+    font-family: myFont;
+    src:url('../书法.ttf');
+}
+#zc_header{
+	background-color: gainsboro;
+	font-family: MyFont;
+	font-size: 3em;
+}
+
+
+/*footer样式*/
+.footer p{
+	color: #fff;
+	font-size: lem;
+	line-height: 1.8em;
+	vertical-align: middle;
+	margin: 0.4em 0;
+}
+.footer p a{
+	color: #fff;
+	text-decoration: none;
+}
+.footer{
+	padding: 1em 0;
+	background-color: #D96B66;
+}
+.footer-right ul{
+	padding: 0;
+}
+.footer-right li{
+	display: inline-block;
+	margin: 0 1em;
+}
+.footer-left{
+	float: left;
+}
+.footer-right{
+	float: right;
+}
+.glyphicon{
+	font-size: 1.2em;
+	color: #f2f0f1;
+}
