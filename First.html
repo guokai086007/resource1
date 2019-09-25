@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基础导航栏</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<!-- 注意在引入bootstrap的js文件之前一定要先引入jquery的js文件！！！ -->
+		<script type="text/javascript" src="js/juery.js"></script>
+		<!-- 引入bootstrap的js文件 -->
+		<script type="text/jscript" src="js/bootstrap.min.js"></script>
+		
+		<!--引入自己写的css文件-->
+		<link type="text/css" rel="stylesheet" href="css/css1.css"/>
+		<!--引入自己写的JavaScript文件-->
+		<script type="text/javascript" src="js/gk1.js" ></script>
+	</head>
+	<body onload="showtime();">
+		<!--网站的头部，一个网站主题标题，左右分别一个图片-->
+		<div class="container-fluid" id="div1">
+			<!--用一个div让图片与网站题目作为一个整体，方便调整-->
+			<div id="div2">
+				<!--使用bootstrap对于图片的样式类使得图片能自适应屏幕-->
+				<img src="img/football.jpg" class="img-responsive img-circle" id="football1"/>
+				<span id="title_Header">疯狂足球</span>
+				<img src="img/大力神杯.gif" class="img-responsive img-circle" id="football2"/>
+			</div>
+			<div class="time">
+				<span id="clock"></span>
+			</div>
+		</div>
+		
+		<!--网站的导航栏部分-->
+		<nav class="navbar navbar-default" role="navigation" id="nav1">
+			<!--屏幕缩小时显示的汉堡按钮-->
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" onmouseover="this.style.backgroundColor='hotpink';" onmouseout="this.style.backgroundColor=''">
+				<span class="sr-only">汉堡按钮</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!--网站题头-->
+			<div class="navbar-header">
+				<a class="navbar-brand" id="nav-brand-itheima" href="#">
+					国内外足球联赛网
+				</a>
+			</div>
+			<!--导航栏选项-->
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav" id="ul_header">
+					<li><a href="login.html">个人登录</a></li>
+					<li><a href="#">关于作者</a></li>
+					<li><a href="#">新闻中心</a></li>
+					<li><a href="#">游客须知</a></li>
+					<li>
+						<!--下拉菜单1-->
+						<div class="dropdown">
+							<!--按钮-->
+							<!--由于bootstrap的源码中设置了按钮的鼠标悬浮事件的颜色变化为#449d44所以咱们不用设置了-->
+							<button class="btn btn-success" id="btn1" data-toggle="dropdown">
+								国内外联赛
+								<span class="caret"></span>
+							</button>
+							<!--无序列表-->
+							<ul class="dropdown-menu" id="ul1">
+								<li class="dropdown-header" id="li_header1">国内联赛</li>
+								<li><a href="积分榜.html">中超联赛</a></li>
+								<li><a href="#">中甲联赛</a></li>
+								<li class="dropdown-header" id="li_header1">五大联赛</li>
+								<li><a href="#">英超联赛</a></li>
+								<li><a href="#">西甲联赛</a></li>
+								<li><a href="#">法甲联赛</a></li>
+								<li><a href="#">意甲联赛</a></li>
+								<li><a href="#">德甲联赛</a></li>
+							</ul>
+						</div>
+					</li>
+					
+					<li>
+						<!--下拉菜单2-->
+						<div class="dropdown">
+							<!--按钮-->
+							<button class="btn btn-success" id="btn2" data-toggle="dropdown">
+								各项杯赛
+								<span class="caret"></span>
+							</button>
+							<!--无序列表-->
+							<ul class="dropdown-menu" id="ul2">
+								<li class="dropdown-header" id="li_header1">国内杯赛</li>
+								<li><a href="#">足协杯</a></li>
+								<li><a href="#">熊猫杯</a></li>
+								<li class="dropdown-header" id="li_header1">五大杯赛</li>
+								<li><a href="#">世界杯</a></li>
+								<li><a href="#">亚洲杯</a></li>
+								<li><a href="#">欧洲杯</a></li>
+								<li><a href="#">美洲杯</a></li>
+								<li><a href="#">非洲杯</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+		<!--网站宣传图片轮播模块-->
+		<div id="slidershow" class="carousel slide" data-ride="carousel">
+			<!--设置图片轮播计数器-->
+			<ol class="carousel-indicators">
+				<li data-target="#slidershow" data-slide-to="0" class="active"></li>
+		        <li data-target="#slidershow" data-slide-to="1"></li>
+		        <li data-target="#slidershow" data-slide-to="2"></li>
+			</ol>
+			<!--设置轮播图片-->
+			<div class="carousel-inner">
+				<!--第一张图片及标题部分-->
+				<div class="item active">
+					<!--图片部分-->
+					<a href="#">
+						<img src="img/武磊西甲宣传照.jpeg" style="height: 300px;width:1000px;margin:0 auto;"/>
+					</a>
+					<!--标题及描述部分-->
+					<div class="carousel-caption">
+						<h2 id="h2_picture1">武磊加盟西班牙人</h2>
+						<p id="p1_picture">
+							武磊正式转会加盟西甲联赛的皇家西班牙人俱乐部。
+							<br/><b id="id1_picture">在此衷心祝福武磊在西甲联赛能够有高光表现！！</b>
+						</p>
+					</div>
+				</div>
+				<!--第二张图片及标题部分-->
+				<div class="item">
+					<!--图片部分-->
+					<a href="#">
+						<img src="img/psb.jpg" style="height: 300px;width:1000px;margin:0 auto;"/>
+					</a>
+					<!--标题及描述部分-->
+					<div class="carousel-caption">
+						<h3 id="h3_picture3">中国亚洲杯0:3不敌伊朗</h3>
+					</div>
+				</div>
+				<!--第三张图片及标题部分-->
+				<div class="item">
+					<!--图片部分-->
+					<a href="#">
+						<img src="img/大力神杯.gif" style="height: 300px;margin:0 auto;"/>
+					</a>
+					<!--标题及描述部分-->
+					<div class="carousel-caption">
+						<h3 id="h3_picture4">大力神杯</h3>
+						<p id="p3_picture3">世界杯冠军球队的标志</p>
+					</div>
+				</div>
+			</div>
+			<!--设置轮播图片控制器(左右控制键)-->
+		    <a class="carousel-control left" href="#slidershow" data-slide="prev" role="button"> 
+		   		<span class="glyphicon glyphicon-chevron-left"></span>
+		    </a>
+		    <a class="carousel-control right" href="#slidershow" data-slide="next" role="button">
+		    	<span class="glyphicon glyphicon-chevron-right"></span>
+		    </a>
+		</div><!--轮播模块结束-->
+		
+		<!--网站的宣传板块-->
+		<div class="container-fluid" id="ad0" style="background-color: lightgreen;">
+			<div class="row">
+				<div class="col-md-4">
+					<h2 style="font-family:'宋体';color: #FF1493;font-style: oblique;">
+						亚冠战况
+					</h2>
+					<!--图片标题-->
+					<center><h4>山东鲁能提前一轮亚冠小组出线！！</h4></center>
+					<img src="img/ad1.gif" class="img-responsive" id="ad_img1"/>
+					<!--新闻简介-->
+					<div class="ad1">
+						北京时间5月8号，亚冠小组赛的一场焦点大战正式打响，中超豪门山东鲁能坐镇主场迎战韩国劲旅庆南FC，最终双方经过一场比赛的争夺，山东鲁能凭借队长蒿俊闵的任意球以及中场大将费莱尼的头球破门，2比1战胜对手，主场收获3分，提前锁定一个小组出线名额。
+					</div>
+					<!--按钮连接-->
+					<button type="button" class="btn btn-info" style="width: 130px;">
+						<a style="color: #000000;">详情>></a>
+					</button>
+				</div>
+				<div class="col-md-4">
+					<h2 style="font-family: '宋体';color: orangered;font-style: oblique;">
+						西甲热点
+					</h2>
+					<center><h4>武磊打入西甲第三球，西班牙人晋级欧联杯！</h4></center>
+					<img src="img/ad2.jpeg"  class="img-responsive" id="ad_img2"/>
+					<div class="ad1">
+						武磊！在西甲第38轮，帮助西班牙人2-0战胜皇家社会，这次不吹不黑，武磊打入的西甲第三球实在漂亮！单刀杀入禁区之后冷静推射破门，门将虽极力阻挡，可武磊的进球像一枚导弹一样，打破了皇家社会的大门，这粒进球也帮助西班牙人提前锁定了下赛季欧联杯的席位。
+					</div>
+					<!--按钮连接-->
+					<button type="button" class="btn btn-info" style="width: 130px;">
+						<a style="color: #000000;">详情>></a>
+					</button>
+				</div>
+				<div class="col-md-4">
+					<h2 style="font-family: '宋体';color: palevioletred;font-style: oblique;">
+						足球奇闻
+					</h2>
+					<center><h4>巾帼英雄，王霜17秒攻破蒙彼利埃球门！！</h4></center>
+					<img src="img/ad3.gif"  class="img-responsive" id="ad_img3"/>
+					<div class="ad1">
+						巴黎圣日耳曼女足在主场4-0狂胜来访的蒙彼利埃女足。比赛刚一开始，第17秒王霜就用左脚兜了一脚精彩的世界波破门，不但赏心悦目，而且惊世骇俗，但这就是王霜一次次带给我们的惊喜。随后队友格耶罗、卡托托和纳迪姆各进一球，帮助巴黎女足取得大胜。
+					</div>
+					<!--按钮连接-->
+					<button type="button" class="btn btn-info" style="width: 130px;">
+						<a style="color: #000000;">详情>></a>
+					</button>
+				</div>
+			</div>
+		</div>
+		
+		<!--更多资讯-->
+		<div class="container-fluid" id="ad1" style="background-color: greenyellow;">
+			<h2 style="font-family:'宋体';color: blue;font-style: oblique;">更多资讯</h2>
+			<div class="row">
+				<!--第一个六列放一个大图，最重要的新闻-->
+				<div class="col-md-6">
+					<img src="img/lp.jpeg" class="img-responsive" id="ad_img4"/>
+					<b style="font-size:21px;">意大利媒体确认：里皮已经决定重新接手国足</b>
+					<div class="ad1">
+						北京时间4月28日晚，几乎在卡纳瓦罗宣布放弃执教国足的同时，意大利《米兰体育报》以“中国！里皮回来了”为题放出消息称，里皮已经改变主意，决定二度接手中国队。
+						里皮将与中国足协签订一份为期4年的工作合同，并在合同期内率队冲击2022年卡塔尔世界杯决赛圈及2023年亚洲杯足球赛。
+					</div>
+					<!--按钮连接-->
+					<button type="button" class="btn btn-info" style="width: 130px;margin-bottom:10px;">
+						<a style="color: #000000;">详情>></a>
+					</button>
+				</div>
+				<!--第二个六列分为三行放3个侧栏赛况-->
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-3">
+							<img src="img/guoan.jpeg" class="img-responsive" id="ad_img5"/>
+						</div>
+						<div class="col-md-8">
+							<b style="font-size:20px;">北京国安亚冠出局</b>
+							<div>
+								5月21日晚，2019亚冠G组第6轮北京中赫国安客场0-3完败浦和红钻，小组2胜1平3负积7分，成为中超BIG4里第一支回家的球队。
+								十连胜、积分榜高居榜首、刷新各种纪录，国安本赛季在联赛中的发挥让人刮目相看，也让全队上下信心满满。然而，亚冠打强队无一胜绩如同当头一棒，让国安坐实“内战内行、外战外行”。
+								<a style="color:red" href="#">......[详情]</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<img src="img/cm600.jpeg" class="img-responsive" id="ad_img6"/>
+						</div>
+						<div class="col-md-8">
+							<br/>
+							<b style="font-size:20px;">绝代双骄！C罗和梅西600球！！</b>
+							<div style="margin-top;20px">
+								今天凌晨的欧冠半决赛，又一次让全世界的球迷睡不着了。梅西用一场完美的演出，再次展现了自己的强大实力，在下半场连入2球后，梅西已经攻进了其在俱乐部生涯的第600粒进球，成为继C罗之后，第二位完成此壮举的现役球员，绝代双骄实乃球迷之幸
+								<a style="color:red" href="#">......[详情]</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<img src="img/ynst.jpg" class="img-responsive" id="ad_img7"/>
+						</div>
+						<div class="col-md-8">
+							<br/>
+							<b style="font-size:20px;">伊涅斯塔加盟日本J联赛</b>
+							<div style="margin-top;20px">
+								北京时间5月24日,日本J联赛球队神户胜利船官方宣布，巴萨的冠军功臣伊涅斯塔加盟该球队。一直期盼能在中超赛场上看到伊涅斯塔身影的中超球迷看到这则消息，都是失望的，对伊涅斯塔的选择很不理解怀疑。因为他选择加盟的，并不是争冠的球队，更不是能打亚冠比赛的球队
+								<a style="color:red" href="#">......[详情]</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--footer-->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-left">
+					<p>1411261659 @ 2019 响应式足球网站   |  版权所有者：<a href="#" style="color:palegreen;font-size:20px;">郭凯</a></p>
+				</div>
+				<div class="footer-right">
+					<ul>
+						<li>
+							<a href="#">
+								<i class="glyphicon glyphicon-phone-alt">&nbsp;联系作者</i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="glyphicon glyphicon-map-marker">&nbsp;作者办公地址</i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="glyphicon glyphicon-question-sign">&nbsp;服务声明</i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
