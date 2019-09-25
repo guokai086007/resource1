@@ -1,0 +1,87 @@
+function testVar(name) {
+    var n = 10;
+    if(true){
+    var  n=20;
+        console.log(n);
+    }
+    console.log(n);
+}
+function testLet(name) {
+    let n = 10;
+    if(true){
+        let  n=20;
+        console.log(n);
+    }
+    console.log(n);
+}
+function testConst(name) {
+    const n = 10;
+    if(true){
+       // const  n=20;
+        n=20;
+        console.log(n);
+    }
+    console.log(n);
+}
+function testTemplateStrings(name) {
+    let age = 10;
+    let addr = '北京市';
+    console.log(name + ' , ${age}  , ${addr}  '+'爱好：敲代码');
+    console.log(name +' 年龄:'+age+" 来自 ："+addr);
+}
+//--解构
+//----解构对象
+let user ={
+    name:'张三',  
+    age:'10',
+    sex:'男'
+}
+let username = user.name;
+console.log(username);
+let{name,age}=user;
+console.log(name);
+console.log(age);
+//----解构数组
+let [a,[b,c]]=[1,[2,3]]
+console.log(a);
+console.log(b);
+console.log(c);
+//----对象的解构赋值
+var {a,b} ={a:"1",b:"2"}
+console.log(a);
+console.log(b);
+//----字符串的解构赋值
+const [a,b,c,d,e]='hello';
+console.log(a+b+c+d+e);
+//----方法默认值
+//------传统方式
+function getName(name){
+    var name = name || 'zhangsan'
+    console.log("hello："+name);  
+}
+//------默认值
+function getName(name='zhangsan'){
+    console.log(`hello：${name}`);  
+}
+function getIndex(index){
+    index++;
+    console.log(index);  
+}
+function getIndex(index=1){
+    index++;
+    console.log(index);  
+}
+//----方法参数未知
+function getUsers(name,...users){
+    console.log(name);
+    console.log(users);    
+}
+//------作为对象存储
+let user ={
+    name:'张三',  
+    age:'10',
+    sex:'男'
+}
+let{name,...other}=user;
+console.log(name);
+console.log(other);
